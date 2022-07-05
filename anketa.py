@@ -20,7 +20,11 @@ def anketa_name(update, context):
         return "year"
 
 def anketa_end(update, context):
-    context.user_data['anketa']['year'] =  int(update.message.text)
+    user_age = update.message.text
+    if user_age.lower()!=user_age.upper():
+        update.message.reply_text("Пожалуйста вводите только цифры")
+        return "year"
+    context.user_data['anketa']['year'] =  int(user_age)
 #    user_text = f"""<b>Имя Фамилия:</b> {context.user_data['anketa']['name']}
 #                    <b>Возраст:</b> {context.user_data['anketa']['year']}
 #                """
