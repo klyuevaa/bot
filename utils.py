@@ -16,4 +16,4 @@ def first_inline_keyboard():
     return InlineKeyboardMarkup(inlinekeyboard)
 
 def first_text_keyboard():
-    return ReplyKeyboardMarkup([['погода в Москве'],['Анкета']])
+    return ReplyKeyboardMarkup([['/test'],['погода в Москве','Анкета']])
